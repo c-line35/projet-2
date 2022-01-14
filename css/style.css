@@ -10,6 +10,10 @@
         background-color: rgb(245, 97, 153);
     }
 }
+header
+{
+    margin:20px;
+}
 #entête
 {
     display:flex;
@@ -31,6 +35,20 @@ nav
 {
     color:#0065F2;
     border-top:3px #0065F2 solid;
+}
+@media all and (max-width:992px) and (min-width:769px)
+{
+    nav
+    {
+        display:flex;
+        width: 100%;
+        font-size: 20px;
+    }
+    .element
+    {
+        width:100%;
+        text-align: center;
+    }
 }
 @media all and (max-width:768px)
 {
@@ -61,27 +79,123 @@ nav
     }
 }
 
-i
+#formulaire-recherche
 {
+    display: flex;
+    margin: 20px;
+}
+#formulaire-recherche input
+{
+    display:flex;
+    align-items: center;
+    border: 1px #f2f2f2 solid;
+    height: 30px;
+}
+#formulaire-recherche label
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
     border-radius: 5px 0 0 5px;
     color: black;
-    background-color: #f2f2f2;
-    height:100%;
-    width: 25px;
-    padding: 5px 0 0 8px;  
+    width:30px;
 }
-button
+#formulaire-recherche button
 {
     color: white;
     background-color: #0065F2;
     border:none;
     border-radius: 0 5px 5px 0;
 }
-#formulaire1
+.tph-version
 {
-    display: flex;
+    display: none;
 }
-#formulaire2
+.fa-search
 {
-    display: flex;
+    color:white;
+    background-color: #0065F2;
+}
+@media all and (max-width:992px) and (min-width:769px)
+{
+    #formulaire-recherche
+    {
+        display: flex;
+        justify-content: center;
+    }
+}
+@media all and (max-width:768px)
+{
+   #formulaire-recherche
+    {
+        display: flex;
+        justify-content: center;
+    }
+    .desktop-version
+    {
+        display:none;
+    }
+    .tph-version
+    {
+        display:flex;
+        align-items: center;
+    }
+}
+
+.filtre /* 1ère boite*/
+{
+    display:flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+.filtres
+{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width:90%;
+}
+.filtre-titre
+{
+    font-weight: bold;
+    display:flex;
+    align-items:center;
+    font-size: 12px;
+}
+.filtres button
+{
+        display:flex; 
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px;
+        color:black;
+        font-weight: bold;
+        background-color: white;
+        border-radius:15px;
+        border: 2px #f2F2F2 solid;
+        height: 30px;
+        padding-right: 20px;
+}
+.filtres button i
+{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    color:#0065F2;
+    background-color: #deebff;
+    height:30px;
+    width:30px;
+    border-radius:50%;
+    margin: 0 10px 0 -10px;
+
+}
+
+
+#info /* boite info*/
+{
+    font-size: 10px;
+    display:flex;
+    justify-content: flex-start;
 }
