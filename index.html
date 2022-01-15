@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html> 
+<html lang="fr"> 
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,11 +13,11 @@
 	<body>
 		<!--header y compris nav-->
 			<header>
-				<section id="entête">
-					<div class="logo"><img src="logo/Booki.png"/></div>
+				<section id="titres">
+					<div class="logo"><img src="logo/Booki.png" alt="logo-booki"/></div>
 					<nav>
-						<a href="#Hébergements" class="element">Hébergements</a>
-						<a href="#Activités" class="element">Activités</a>
+						<a href="#hebergements">Hébergements</a>
+						<a href="#activites">Activités</a>
 					</nav>
 				</section>
 				<h1>Trouver votre hébergement pour des vacances de rêve</h1>
@@ -25,73 +25,136 @@
 			</header>
 
 		<!--section 1 = recherche-->
-			<section id="recherche">
-				<form  method="post">
-					<p id="formulaire-recherche" >
-						<label for="ville"><i class="loupe fas fa-map-marker-alt fa-xs"></i></label>
-						<input id="champ" type="text" name="ville"/>
-						<button class="desktop-version" type="submit">Rechercher</button>
-						<button class ="tph-version" type="submit"><i class="fas fa-search"></i></button>
-					</p>
-				</form>
-			</section>
+			<form  method="post">
+				<p id="formulaire-recherche" >
+					<label for="ville"><i class="loupe fas fa-map-marker-alt fa-xs"></i></label>
+					<input id="champ" type="text" name="ville"/>
+					<button class="desktop-version" type="submit">Rechercher</button>
+					<button class ="tph-version" type="submit"><i class="fas fa-search"></i></button>
+				</p>
+			</form>
 
 			<!--Section 2 = filtres-->
-				<section class="filtre">
-					<div class="filtre-titre">Filtres
-					</div>
-					<div class="filtres">
-						<button type="submit"><i class="fas fa-money-bill-wave-alt"></i>Economique</button>
-						<button type="submit"><i class="fas fa-child"></i>Familial</button>	
-						<button type="submit"><i class="fas fa-heart"></i>Romantique</button>
-						<button type="submit"><i class="fas fa-dog"></i>Animaux acceptés</button>
-					</div>		
-				</section>		
-				<div id="filtre-info"> <i class="fas fa-info fa-xs"></i>   Plus de 500 logements sont disponibles dans cette ville</div>
-
-		<!--section 2 = hébergements-->
-			<section id="hébergementgénéral">
-				<section id="hébergement">
-					<div class="hébergement1">
-						<h2 class="hébergement2">Hébergements</h2>
-						<div class="hébergement2"><!--catres des différents hébergements--></div>
-						<p class="hébergement2">Afficher plus</p>
-					</div>
-					
+			<section class="filtre">
+				<div class="filtre-titre">Filtres
+				</div>
+				<div class="filtres">
+					<button type="submit"><i class="fas fa-money-bill-wave"></i>Economique</button>
+					<button type="submit"><i class="fas fa-child"></i>Familial</button>	
+					<button type="submit"><i class="fas fa-heart"></i>Romantique</button>
+					<button type="submit"><i class="fas fa-dog"></i>Animaux autorisés</button>
+				</div>		
+			</section>		
+			<div class="info"> <i class="fas fa-info fa-xs"></i>   Plus de 500 logements sont disponibles dans cette ville</div>	
 	
-				</section>
-				<section id="populaires">
-					<h2>Les plus populaires</h2>
-				</section>
+<!--implémentation de la première card-->
+			<section id="hebergements">
+				<h2>Hébergements à Marseille</h2>
+				<div class="card-group">
+					<div class="card">
+						<a href="#">
+							<div class="card-image"><img src="images/marcus-loke-WQJvWU_HZFo-unsplash.jpg"></div>
+							<div class="card-body">
+								<div class="card-name">Auberge La Cannebière</div>
+								<div class="card-price">Nuit à partir de <strong>25€</strong></div>
+								<div class="card-feedback">
+									<i class="fool fas fa-star"></i>
+									<i class="fool fas fa-star"></i>
+									<i class="fool fas fa-star"></i>
+									<i class="fool fas fa-star"></i>
+									<i class="empty fas fa-star"></i>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="card">
+						<a href="#">
+							<div class="card-image"><img src="images/fred-kleber-gTbaxaVLvsg-unsplash.jpg"></div>
+							<div class="card-body">
+								<div class="card-name">Hôtel du port</div>
+								<div class="card-price">Nuit à partir de <strong>52€</strong></div>
+								<div class="card-feedback">
+									<i class="fool fas fa-star"></i>
+									<i class="fool fas fa-star"></i>
+									<i class="fool fas fa-star"></i>
+									<i class="fool fas fa-star"></i>
+									<i class="fool fas fa-star"></i>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="card">
+						<a href="#">
+							<div class="card-image"><img src="images/reisetopia-B8WIgxA_PFU-unsplash.jpg"></div>
+							<div class="card-body">
+								<div class="card-name">Hôtel Les Mouettes</div>
+								<div class="card-price">Nuit à partir de <strong>76€</strong></div>
+								<div class="card-feedback">
+									<i class="fool fas fa-star"></i>
+									<i class="fool fas fa-star"></i>
+									<i class="fool fas fa-star"></i>
+									<i class="fool fas fa-star"></i>
+									<i class="empty fas fa-star"></i>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="card">
+						<a href="#">
+							<div class="card-image"><img src="images/annie-spratt-Eg1qcIitAuA-unsplash.jpg"></div>
+							<div class="card-body">
+								<div class="card-name">Hôtel de la mer</div>
+								<div class="card-price">Nuit à partir de <strong>46€</strong></div>
+								<div class="card-feedback">
+									<i class="fool fas fa-star"></i>
+									<i class="fool fas fa-star"></i>
+									<i class="fool fas fa-star"></i>
+									<i class="empty fas fa-star"></i>
+									<i class="empty fas fa-star"></i>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="card">
+						<a href="#">
+							<div class="card-image"><img src="images/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"></div>
+							<div class="card-body">
+								<div class="card-name">Auberge Le Panier</div>
+								<div class="card-price">Nuit à partir de <strong>23€</strong></div>
+								<div class="card-feedback">
+									<i class="fool fas fa-star"></i>
+									<i class="fool fas fa-star"></i>
+									<i class="fool fas fa-star"></i>
+									<i class="fool fas fa-star"></i>
+									<i class="empty fas fa-star"></i>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="card">
+						<a href="#">
+							<div class="card-image"><img src="images/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"></div>
+							<div class="card-body">
+								<div class="card-name">Hôtel chez Amina</div>
+								<div class="card-price">Nuit à partir de <strong>96€</strong></div>
+								<div class="card-feedback">
+									<i class="fool fas fa-star"></i>
+									<i class="fool fas fa-star"></i>
+									<i class="fool fas fa-star"></i>
+									<i class="fool fas fa-star"></i>
+									<i class="fool fas fa-star"></i>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<p>Afficher plus</p>
 			</section>
-		<h2 id="Activités">Activités</h2>
-			
-
-
-
-
-
-
-
-<i class="fas fa-star">
-
-		<!--section 3 = activités-->
-	<section id="activité">
-
-
-	</section>
-
-
-
-
-
-
-
-
-		<!--footer-->
-	<footer>
-
-
-	</footer>
-</body>
+	
+	
+	
+	
+	
+	
+		</body>
 </html>

@@ -12,13 +12,25 @@
 }
 header
 {
-    margin:20px;
+    margin:0 5px 0 20px;
 }
-#entête
+#titres
 {
     display:flex;
     justify-content: space-between;
     margin-left: 20px;
+}
+.logo img
+{
+ width: 100px;   
+}
+header h1
+{
+    font-size:16px;
+}
+header p
+{
+    font-size: 12px;
 }
 nav
 {
@@ -26,12 +38,15 @@ nav
     justify-content: space-around;
     width:25%;
 }
-.element
+nav a
 {
     color: black;
+    font-size: 14px;
+    padding-top: 20px;;
     text-decoration: none;
+
 }
-.element:hover
+nav a:hover
 {
     color:#0065F2;
     border-top:3px #0065F2 solid;
@@ -44,7 +59,7 @@ nav
         width: 100%;
         font-size: 20px;
     }
-    .element
+    nav a
     {
         width:100%;
         text-align: center;
@@ -52,7 +67,7 @@ nav
 }
 @media all and (max-width:768px)
 {
-    #entête
+    #titres
     {
         display:flex;
         flex-direction:column;
@@ -67,12 +82,12 @@ nav
         font-size: 20px;
         border-bottom: 3px #f2f2f2 solid;
     }
-    .element
+    nav a
     {
         width:100%;
         text-align: center;
     }
-    .element:hover
+    nav a:hover
     {
         border-top: none;
         border-bottom: 3px #0065F2 solid;
@@ -82,7 +97,7 @@ nav
 #formulaire-recherche
 {
     display: flex;
-    margin: 20px;
+    margin: 5px 0 5px 20px;
 }
 #formulaire-recherche input
 {
@@ -107,12 +122,14 @@ nav
     background-color: #0065F2;
     border:none;
     border-radius: 0 5px 5px 0;
+    font-size: 12px;
+    font-weight: bold;
 }
 .tph-version
 {
     display: none;
 }
-.fa-search
+.tph-version i
 {
     color:white;
     background-color: #0065F2;
@@ -148,20 +165,23 @@ nav
     display:flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    margin: 20px;
+    margin: 5px 0 5px 20px;
 }
 .filtres
 {
     display:flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-wrap: wrap;
     width:90%;
+    margin-bottom: 10px;
 }
 .filtre-titre
 {
     font-weight: bold;
     display:flex;
+    justify-content: flex-start;
     align-items:center;
+    margin:0 0 10px 10px;
     font-size: 12px;
 }
 .filtres button
@@ -177,6 +197,13 @@ nav
         border: 2px #f2F2F2 solid;
         height: 30px;
         padding-right: 20px;
+        margin:10px;
+}
+.filtres button:hover
+{
+    background-color: #deebff;
+    color: #0065F2;
+    border: none;
 }
 .filtres button i
 {
@@ -189,13 +216,92 @@ nav
     width:30px;
     border-radius:50%;
     margin: 0 10px 0 -10px;
-
 }
-
-
-#info /* boite info*/
+.info
 {
-    font-size: 10px;
     display:flex;
     justify-content: flex-start;
+    margin: 5px 0 5px 20px;
+    font-size: 12px;
+}
+.info i
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: #0065F2;
+    width: 15px;
+    height: 15px;
+    border: 1px #f2f2f2 solid;
+    border-radius: 50%;
+    margin-right: 10px;
+
+}
+#hebergements
+{
+    display:flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    width:60%;
+    margin:20px;
+    padding:10px 20px 10px 20px;
+    border-radius: 10px;
+}
+#hebergements h2
+{
+    font-size: 14px;
+    font-weight:bold;
+}
+.card-group
+{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+   
+}
+.card 
+{
+    display:flex;
+    justify-content: center;
+    width: 175px;
+    height: 150px;
+    margin-bottom: 15px;
+    padding-top: 3px;
+    border-radius: 10px;
+    background-color:white; 
+}
+.card a
+{
+    text-decoration: none;
+}
+.card-image img
+{
+    width:165px;
+    height: 100px;
+    object-fit: cover;
+    border-radius:10px 10px 0 0;
+}
+.card-body
+{
+    display:flex;
+    flex-direction: column;
+    color:black;
+    font-size:10px;
+}
+.card-name
+{
+    font-weight: bold;
+}
+.fool
+{
+    color:#0065F2;
+}
+.empty
+{
+    color:#f2f2f2;
+}
+#hebergements p
+{
+    font-size: 10px;
+    font-weight: bold;
 }
