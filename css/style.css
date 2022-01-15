@@ -237,6 +237,11 @@ nav a:hover
     margin-right: 10px;
 
 }
+#bloc-hebergements
+{
+    display:flex;
+    justify-content: space-between;
+}
 #hebergements
 {
     display:flex;
@@ -252,43 +257,43 @@ nav a:hover
     font-size: 14px;
     font-weight:bold;
 }
-.card-group
+#hebergements .card-group
 {
     display:flex;
     justify-content:space-between;
     flex-wrap: wrap;
    
 }
-.card 
+#hebergements .card 
 {
     display:flex;
     justify-content: center;
-    width: 175px;
+    width: 180px;
     height: 150px;
     margin-bottom: 15px;
     padding-top: 3px;
     border-radius: 10px;
     background-color:white; 
 }
-.card a
+#hebergements .card a
 {
     text-decoration: none;
 }
-.card-image img
+#hebergements .card-image img
 {
     width:165px;
     height: 100px;
     object-fit: cover;
     border-radius:10px 10px 0 0;
 }
-.card-body
+#hebergements .card-body
 {
     display:flex;
     flex-direction: column;
     color:black;
     font-size:10px;
 }
-.card-name
+#hebergements .card-name
 {
     font-weight: bold;
 }
@@ -304,4 +309,67 @@ nav a:hover
 {
     font-size: 10px;
     font-weight: bold;
+}
+
+#populaires
+{
+    display:flex;
+    flex-direction:column;
+    width:320px;
+    background-color: #f2f2f2;
+    margin:20px;
+    padding:10px 20px 10px 20px;
+    border-radius: 10px;
+}
+#populaires-titre
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#populaires h2
+{
+    font-size: 14px;
+    font-weight:bold;
+}
+#populaires .card a
+{
+    display:flex;
+    justify-content: flex-start;
+    width: 90%;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 15px;
+    padding-top: 3px;
+    border-radius: 10px;
+    background-color:white; 
+    text-decoration: none;
+}
+#populaires .card-image img
+{
+    width:100px;
+    height: 95PX;
+    object-fit: cover;
+    border-radius:10px 0 0 10px;
+    padding-left: 3px;
+}
+#populaires .card-body
+{
+    display:flex;
+    flex-direction: column;
+    color:black;
+    font-size:10px;
+}
+#populaires .card-name
+{
+    font-weight: bold;
+    margin: 10px;
+}
+#populaires .card-price
+{
+    margin:0 10px 10px 10px;
+}
+#populaires .card-feedback
+{
+    margin: 20px 10px 10px 10px;
 }
