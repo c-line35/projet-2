@@ -3,18 +3,16 @@
     font-family:'Raleway', sans-serif;
     box-sizing: border-box;
 }
-@media all and (max-width:992px) and (min-width:769px)
+h1, h2
 {
-    body
-    {
-        background-color: rgb(245, 97, 153);
-    }
+    font-size:14px;
 }
+/* style header*/
 header
 {
-    margin:0 5px 0 20px;
+    margin-left: 20px;
 }
-#titres
+#top /* logo + liens de nevigation*/
 {
     display:flex;
     justify-content: space-between;
@@ -22,15 +20,8 @@ header
 }
 .logo img
 {
- width: 100px;   
-}
-header h1
-{
-    font-size:16px;
-}
-header p
-{
-    font-size: 12px;
+    width: 100px;   
+    padding-top: 20px;
 }
 nav
 {
@@ -40,188 +31,204 @@ nav
 }
 nav a
 {
+    padding-top: 20px;
+    border-top:3px transparent solid;
     color: black;
-    font-size: 14px;
-    padding-top: 20px;;
+    font-size: 12px;
     text-decoration: none;
-
 }
 nav a:hover
 {
     color:#0065F2;
     border-top:3px #0065F2 solid;
 }
-@media all and (max-width:992px) and (min-width:769px)
+
+header p
 {
-    nav
-    {
-        display:flex;
-        width: 100%;
-        font-size: 20px;
-    }
-    nav a
-    {
-        width:100%;
-        text-align: center;
-    }
+    font-size: 12px;
 }
+/*responsive header version tph*/
 @media all and (max-width:768px)
 {
-    #titres
+    header
     {
-        display:flex;
+        margin-left: 0;
+    }
+    #top
+    {
         flex-direction:column;
         align-items: center;
-        width:100%;
-        margin-left:0;    
+        margin-left:0;
     }
     nav
     {
-        display:flex;
         width: 100%;
-        font-size: 20px;
-        border-bottom: 3px #f2f2f2 solid;
+        font-size: 20px;  
     }
     nav a
     {
-        width:100%;
         text-align: center;
+        width:100%;
+        padding: 10px 0;
+        border-top: transparent;
+        border-bottom: 3px #f2f2f2 solid;
     }
     nav a:hover
     {
-        border-top: none;
+        border-top:transparent;
         border-bottom: 3px #0065F2 solid;
     }
+    header h1, header p
+    {
+      margin-left: 20px;  
+    }
 }
-
+/*style section recherche*/
 #formulaire-recherche
 {
     display: flex;
-    margin: 5px 0 5px 20px;
+    margin: 20px;
 }
-#formulaire-recherche input
-{
-    display:flex;
-    align-items: center;
-    border: 1px #f2f2f2 solid;
-    height: 30px;
-}
-#formulaire-recherche label
+#formulaire-recherche label /*bloc icone localisation*/
 {
     display:flex;
     justify-content: center;
-    align-items: center;
-    background-color: #f2f2f2;
-    border-radius: 5px 0 0 5px;
-    color: black;
+    align-items: center; 
     width:30px;
+    background-color: #f2f2f2;
+    border-radius: 10px 0 0 10px;
+    color: black;
+}
+#formulaire-recherche input/*cadre à remplir*/
+{
+    height: 30px;
+    border: 1px #f2f2f2 solid;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
 }
 #formulaire-recherche button
 {
-    color: white;
+    display:flex;
+    align-items: center;
+    height:30px;
     background-color: #0065F2;
     border:none;
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 10px 10px 0;
+    color: white;
     font-size: 12px;
     font-weight: bold;
 }
-.tph-version
+#formulaire-recherche button i
 {
-    display: none;
+   display: none;
+   font-size: 15px;
 }
-.tph-version i
-{
-    color:white;
-    background-color: #0065F2;
-}
-@media all and (max-width:992px) and (min-width:769px)
-{
-    #formulaire-recherche
-    {
-        display: flex;
-        justify-content: center;
-    }
-}
+/* Responsive section recherche version tph*/
 @media all and (max-width:768px)
 {
-   #formulaire-recherche
+    #recherche
+    {
+        display: flex;
+        justify-content: center;
+    } 
+    #formulaire-recherche label
+    {
+        width: 40px;
+        font-size: 20px;
+    }
+    #formulaire-recherche
+    {
+        justify-content: center;
+        width: calc(100% - 20px);
+        max-width: 400px;
+    }
+    #formulaire-recherche input
+    {
+        width:75%;
+        height: 40px;
+    }
+    #formulaire-recherche button
+    {
+        justify-content: center;
+        border-radius: 10px;
+        width:40px;
+        height: 40px;
+        margin-left: -10px;
+    }
+    #formulaire-recherche button i
     {
         display: flex;
         justify-content: center;
     }
-    .desktop-version
+    #formulaire-recherche button span
     {
         display:none;
-    }
-    .tph-version
-    {
-        display:flex;
-        align-items: center;
-    }
+    }  
 }
 
-.filtre /* 1ère boite*/
+/* style section filtre*/
+#filtre
 {
     display:flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    margin: 5px 0 5px 20px;
+    margin: 20px;
+}
+#filtre h2
+{
+    display:flex;
+    justify-content: flex-start;
+    align-items:center;
+    margin-right:20px;
+    font-size: 12px;
+    font-weight: bold;
 }
 .filtres
 {
     display:flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    width:90%;
-    margin-bottom: 10px;
 }
-.filtre h2
-{
-    font-weight: bold;
-    display:flex;
-    justify-content: flex-start;
-    align-items:center;
-    margin:0 0 10px 10px;
-    font-size: 12px;
-}
+
 .filtres button
 {
-        display:flex; 
-        justify-content: space-between;
-        align-items: center;
-        font-size: 12px;
-        color:black;
-        font-weight: bold;
-        background-color: white;
-        border-radius:15px;
-        border: 2px #f2F2F2 solid;
-        height: 30px;
-        padding-right: 20px;
-        margin:10px;
+    display:flex; 
+    justify-content: space-between;
+    align-items: center; 
+    height: 30px; 
+    padding-right: 20px;
+    margin: 10px 20px 10px 0;
+    background-color: white;
+    border: 2px #f2F2F2 solid;
+    border-radius:15px;
+    font-size: 12px;
+    color:black;
+    font-weight: bold;        
 }
 .filtres button:hover
 {
     background-color: #deebff;
     color: #0065F2;
-    border: none;
+    border: 2px #deebff solid;
 }
 .filtres button i
 {
     display:flex;
     justify-content:center;
     align-items: center;
-    color:#0065F2;
-    background-color: #deebff;
-    height:30px;
     width:30px;
-    border-radius:50%;
+    height:30px;
     margin: 0 10px 0 -10px;
+    background-color: #deebff;
+    border-radius:50%;
+    color:#0065F2;
 }
 .info
 {
     display:flex;
     justify-content: flex-start;
-    margin: 5px 0 5px 20px;
+    margin-left: 20px;
     font-size: 12px;
 }
 .info i
@@ -229,71 +236,92 @@ nav a:hover
     display:flex;
     justify-content: center;
     align-items: center;
-    color: #0065F2;
     width: 15px;
     height: 15px;
+    margin-right: 10px;
     border: 1px #f2f2f2 solid;
     border-radius: 50%;
-    margin-right: 10px;
-
+    color: #0065F2;
 }
-#bloc-hebergements
+.info span
+{
+    padding-top:2px;
+}
+@media all and (max-width:768px)
+{
+    #filtre
+    {
+        margin-top: 0;
+    }
+}
+
+/*style section hebergements ET populaires*/
+#bloc-hebergements-populaires
 {
     display:flex;
     justify-content: space-between;
 }
+/*style section hebergements*/
 #hebergements
 {
     display:flex;
     flex-direction: column;
-    background-color: #f2f2f2;
+    justify-content:flex-start;
     width:65%;
     margin:20px;
-    padding:10px 20px 10px 20px;
+    padding:20px;
+    background-color: #f2f2f2;
     border-radius: 10px;
 }
 #hebergements h2
 {
-    font-size: 14px;
+   
     font-weight:bold;
 }
 #hebergements .card-group
 {
     display:flex;
     justify-content:space-between;
+    align-content: space-between;
     flex-wrap: wrap;
-   
+    height: calc(100% - 80px); 
 }
 #hebergements .card
-{
-    display:flex;
-    justify-content: center;
-    width: 200px;
+{ 
+    width:calc(33% - 20px);
     height: 150px;
-    margin-bottom: 15px;
-    padding-top: 3px;
-    border-radius: 10px;
-    background-color:white; 
-    box-shadow: 0px 0px 10px grey;
+    margin-bottom: 20px;
 }
 #hebergements .card a
 {
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    height:100%;
+    background-color: white;
     text-decoration: none;
+    box-shadow: 0px 0px 10px grey;
+    border-radius: 15px;
 }
-#hebergements .card-image img
+#hebergements .card a:hover
 {
-    width:194px;
-    height: 100px;
-    object-fit: cover;
-    border-radius:10px 10px 0 0;
-    
+    background-color: #deebff;
+}
+#hebergements img
+{
+    object-fit:cover;
+    width: calc(100% - 6px);
+    height: 60%;
+    margin: 3px auto;
+    border-radius:15px 15px 0 0;
 }
 #hebergements .card-body
 {
     display:flex;
     flex-direction: column;
+    margin: 5px 0 0 7px;
     color:black;
-    font-size:10px;
+    font-size:12px;
 }
 #hebergements .card-name
 {
@@ -309,18 +337,19 @@ nav a:hover
 }
 #hebergements p
 {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: bold;
+    margin: 20px 0 0 0;
 }
-
+/*style section populaires*/
 #populaires
 {
     display:flex;
     flex-direction:column;
     width:30%;
+    margin: 20px;
+    padding: 20px 0 10px 0; 
     background-color: #f2f2f2;
-    margin:20px;
-    padding:10px 20px 10px 20px;
     border-radius: 10px;
 }
 #populaires-titre
@@ -328,19 +357,20 @@ nav a:hover
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-right:20px;
 }
 #populaires h2
 {
-    font-size: 14px;
-    font-weight:bold;
+    padding-left: 20px;
 }
 #populaires .card a
 {
     display:flex;
-    justify-content: flex-start;
-    width: 90%;
+    justify-content:flex-start;
+    width: calc(100% - 40px);
+    max-width: 400px;
     height: 100px;
-    margin: auto;
+    margin:auto;
     margin-bottom: 15px;
     padding-top: 3px;
     border-radius: 10px;
@@ -348,45 +378,111 @@ nav a:hover
     text-decoration: none;
     box-shadow: 0px 0px 10px grey;
 }
-#populaires .card-image img
+#populaires .card a:hover
 {
-    width:100px;
-    height: 95px;
+    background-color: #deebff;
+}
+#populaires img
+{
+    width: 40%;
+    height: 94px;
     object-fit: cover;
-    border-radius:10px 0 0 10px;
     padding-left: 3px;
+    border-radius:10px 0 0 10px;
 }
 #populaires .card-body
 {
     display:flex;
     flex-direction: column;
+    justify-content: space-between;
+    margin:10px;
     color:black;
-    font-size:10px;
+    font-size:12px;
 }
 #populaires .card-name
 {
     font-weight: bold;
-    margin: 10px;
 }
-#populaires .card-price
+
+@media all and (max-width:992px) and (min-width:769px)
 {
-    margin:0 10px 10px 10px;
+    #bloc-hebergements-populaires
+    {
+    flex-direction: column-reverse;
+    }
+    #populaires, #hebergements
+    {
+        width: calc(100% - 40px);
+        margin: 20px auto;
+        border-radius: 15px;
+    }
+    #populaires .card-group
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #populaires .card
+    {
+        width: calc(100% - 10px);
+    }
+    #hebergements .card
+    {
+        margin-bottom: 20px;
+    }
+    #hebergements p
+    {
+        margin: 0;
+    }
 }
-#populaires .card-feedback
+@media all and (max-width:768px)
 {
-    margin: 20px 10px 10px 10px;
+    #bloc-hebergements-populaires
+    {
+        flex-direction: column-reverse;
+    }
+    #populaires
+    {
+        width: 100%;
+        padding: 20px 0 20px 0;
+        margin: 20px 0;
+        border-radius:0;
+    }
+    #hebergements
+    {
+        width:100%;
+        background-color: transparent;
+        margin: 0;
+    }
+    #hebergements .card-group
+    {
+        flex-direction: column;
+        align-content:center;
+        width: 100%;
+        
+    }
+    #hebergements .card
+    {
+        width:100%;
+        max-width:400px;
+        margin-bottom: 20px;
+        height: 150px;
+    }
+    #hebergements p
+    {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
 }
+
+/*style section activités*/
 #activites
 {
     display:flex;
     flex-direction: column;
     margin:20px;
-    font-size: 10px;
     font-weight: bold;
-}
-#activites .card-titre
-{
-    margin-left: 5px;
 }
 #activites .card-group
 {
@@ -397,7 +493,7 @@ nav a:hover
 {
     display:flex;
     flex-direction: column;
-    width:20%;
+    width: calc(100% / 4 - 30px);
     height:300px;
     border-radius:10px;
     box-shadow: 0px 0px 10px grey;
@@ -413,23 +509,22 @@ nav a:hover
 {
     display:flex;
     flex-direction: column;
-    padding: 0;
-    width:20%;
+    justify-content: space-between;
+    width: calc(100% / 4 - 30px);
 }
 #activites .card-medium
 {
     display:flex;
     flex-direction: column;
     width:100%;
-    height: 160px;
-    margin:auto;
+    height: 150px;
     border-radius:10px;
     box-shadow: 0px 0px 10px grey;
 }
 #activites .card-medium img
 {
     width:100%;
-    height: 120px;
+    height: 110px;
     object-fit: cover;
     border-radius: 10px 10px 0 0;    
 }
@@ -438,17 +533,54 @@ nav a:hover
     display:flex;
     flex-direction: column;
     width:100%;
-    height:120px;
-    margin:auto;
+    height:110px;
     border-radius:10px;
     box-shadow: 0px 0px 10px grey;
 }
 #activites .card-little img
 {
     width:100%;
-    height: 80px;
+    height: 70px;
     object-fit: cover;
     border-radius: 10px 10px 0 0;    
+}
+#activites .card-titre
+{
+    margin-left: 5px;
+    font-size: 12px;
+}
+#activites .card-big:hover, #activites .card-medium:hover, #activites .card-little:hover
+{
+    background-color: #deebff;
+}
+
+@media all and (max-width:768px)
+{
+    #activites
+    {
+        margin-top: 0;
+    }
+    #activites .card-group
+    {
+        flex-direction:column;
+        align-items:center;
+    }
+    #activites .card-group-2
+    {
+        align-items: center;
+        width:100%;
+    }
+    #activites .card-big, #activites .card-group-2 .card-medium, #activites .card-group-2 .card-little
+    {
+        width: 100%;
+        max-width: 400px;
+        height:130px;
+        margin-bottom: 20px;
+    }
+    #activites .card-big img, #activites .card-group-2 .card-medium img, #activites .card-group-2 .card-little img
+    {
+        height: 100px;
+    }
 }
 footer
 {
@@ -456,14 +588,15 @@ footer
     background-color: #f2f2f2;
     padding: 20px 0 20px 0;
 }
-footer div
-{
-    margin: 0 150px 0 20px;
-}
 h3
 {
     font-weight:bold;
     font-size: 10px;
+}
+footer div
+{
+    margin: 0 150px 0 20px;
+    width: 33%;
 }
 ul
 {
@@ -474,4 +607,11 @@ ul
 li
 {
     margin-top: 7px;
+}
+@media all and (max-width:768px)
+{
+    footer
+    {
+    flex-direction: column;
+    }
 }
