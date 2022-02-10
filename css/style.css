@@ -369,6 +369,7 @@ header p
     justify-content:flex-start;
     width: calc(100% - 40px);
     max-width: 400px;
+    min-width: 210px;
     height: 100px;
     margin:auto;
     margin-bottom: 15px;
